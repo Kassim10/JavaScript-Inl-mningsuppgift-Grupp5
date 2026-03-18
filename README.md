@@ -1,0 +1,1 @@
+Hej! Jag heter Fredrik och jag älskar Javascript.
