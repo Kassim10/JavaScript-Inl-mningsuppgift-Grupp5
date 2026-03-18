@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.input-area {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#uppgift-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#lagg-till-knapp {
+    padding: 10px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#lagg-till-knapp:hover {
+    background-color: #45a049;
+}
+
+#todo-lista {
+    list-style: none;
+    width: 100%;
+    max-width: 500px;
+}
+
+#todo-lista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#todo-lista li span {
+    cursor: pointer;
+    flex: 1;
+}
+
+#todo-lista li.klar span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.ta-bort {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ta-bort:hover {
+    background-color: #c0392b;
+}
