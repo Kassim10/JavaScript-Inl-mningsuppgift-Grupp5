@@ -1,13 +1,49 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min sida</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>To-do List</title>
 </head>
 <body>
-    
-    <script src="script.js"></script>
+    <header>
+        <h1>To-do Lista</h1>
+        <img src="./images/to-do-list-icon.png" alt="to-do list icon">
+    </header>
+    <div class="container">
+      <div class="card">
+        <h1 id="app-title" class="title">To-do Lista</h1>
+
+        <form id="item-form">
+          <input
+            type="text"
+            id="item-input"
+            name="item"
+            placeholder="Ange vara" />
+
+          <button type="submit" class="btn">
+            <ion-icon name="add-circle-outline"></ion-icon> Lägg till
+          </button>
+        </form>
+
+        <div class="filter">
+          <input
+            type="text"
+            class="form-input-filter"
+            id="filter"
+            placeholder="Sök" />
+        </div>
+
+        <ul id="item-list" class="items"></ul>
+
+        <button id="clear" class="btn btn-clear">
+          <ion-icon name="trash-outline"></ion-icon>
+          Töm allt
+        </button>
+      </div>
+    </div>
 </body>
 </html>
