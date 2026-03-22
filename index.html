@@ -1,34 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="site.css" />
+    <script src="./storage.js" defer></script>
+    <script src="./dom.js" defer></script>
+    <script src="app.js" defer></script>
     <title>To-do List</title>
-</head>
-    <body>
+  </head>
+  <body>
     <div class="page-wrapper">
-        <header class="app-header">
-        <div class="header-text">
-            <p class="eyebrow">Planera din dag</p>
-            <h1>My To-Do List</h1>
-            <p class="subtitle">Skriv upp dina uppgifter och håll koll på vad som behöver göras.</p>
-        </div>
-        <div class="header-icon">
-            <ion-icon name="checkbox-outline"></ion-icon>
-        </div>
-        </header>
+      <header class="app-header">
+      <div class="header-text">
+        <p class="eyebrow">Planera din dag</p>
+        <h1>My To-Do List</h1>
+        <p class="subtitle">Skriv upp dina uppgifter och håll koll på vad som behöver göras.</p>
+      </div>
+      <div class="header-icon">
+          <ion-icon name="checkbox-outline"></ion-icon>
+      </div>
+      </header>
 
-        <main class="container">
+      <main class="container">
         <section class="card todo-card">
-            <div class="card-top">
+          <div class="card-top">
             <h2 id="app-title" class="title">Mina uppgifter</h2>
             <p class="task-info">Lägg till, sök och hantera dina to-dos.</p>
-            </div>
+          </div>
 
-            <div class="quick-stats">
+          <div class="quick-stats">
             <div class="stat-box">
                 <span class="stat-label">Fokus</span>
                 <strong>Idag</strong>
@@ -37,62 +45,53 @@
                 <span class="stat-label">Status</span>
                 <strong>Att göra</strong>
             </div>
-            </div>
+          </div>
 
-            <form id="item-form" class="todo-form">
+          <form id="item-form" class="todo-form">
             <label for="item-input" class="sr-only">Lägg till uppgift</label>
             <div class="input-group">
-                <ion-icon name="create-outline" class="input-icon"></ion-icon>
-                <input
-                type="text"
-                id="item-input"
-                name="item"
-                placeholder="Skriv en ny uppgift..." />
+              <ion-icon name="create-outline" class="input-icon"></ion-icon>
+              <input type="text" id="item-input" name="item" placeholder="Skriv en ny uppgift..." />
             </div>
 
             <button type="submit" class="btn">
-                <ion-icon name="add-circle-outline"></ion-icon>
-                Lägg till uppgift
+              <ion-icon name="add-circle-outline"></ion-icon>
+              Lägg till uppgift
             </button>
-            </form>
+          </form>
 
-            <div class="filter">
+          <div class="filter">
             <label for="filter" class="sr-only">Sök uppgift</label>
             <div class="input-group">
-                <ion-icon name="search-outline" class="input-icon"></ion-icon>
-                <input
-                type="text"
-                class="form-input-filter"
-                id="filter"
-                placeholder="Sök bland uppgifter..." />
+              <ion-icon name="search-outline" class="input-icon"></ion-icon>
+              <input type="text" class="form-input-filter" id="filter" placeholder="Sök bland uppgifter..." />
             </div>
-            </div>
+          </div>
 
-            <div class="list-section">
+          <div class="list-section">
             <div class="list-header">
-                <h3>Uppgiftslista</h3>
-                <span class="list-badge">To-Do</span>
+              <h3>Uppgiftslista</h3>
+              <span class="list-badge">To-Do</span>
             </div>
 
             <ul id="item-list" class="items"></ul>
-            </div>
+          </div>
 
-            <div class="actions">
+          <div class="actions">
             <button id="clear" class="btn btn-clear">
-                <ion-icon name="trash-outline"></ion-icon>
-                Rensa alla uppgifter
+              <ion-icon name="trash-outline"></ion-icon>
+              Rensa alla uppgifter
             </button>
-            </div>
+          </div>
         </section>
-        </main>
+      </main>
     </div>
-
     <dialog>
-        <span id="close-modal" aria-label="Closes the dialog">&times;</span>
-        <div>
-        <h4 id="messageTitle">Ett fel har inträffat</h4>
+      <span id="close-modal" aria-label="Closes the dialog">&times;</span>
+      <div>
+        <h4 id="messageTitle">Du har ingen uppgift</h4>
         <p id="message">Detta är en dialog</p>
-        </div>
+      </div>
     </dialog>
-    </body>
+  </body>
 </html>
