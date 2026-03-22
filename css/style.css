@@ -102,11 +102,6 @@ body {
   margin-bottom: 0.4rem;
 }
 
-.task-info {
-  color: #cbd5e1;
-  font-size: 0.95rem;
-}
-
 .quick-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -135,10 +130,6 @@ body {
 
 .todo-form {
   margin-bottom: 1.2rem;
-}
-
-.filter {
-  margin-bottom: 1.5rem;
 }
 
 .input-group {
@@ -237,11 +228,6 @@ ul li {
 ul li:hover {
   transform: translateY(-1px);
   background: rgba(255, 255, 255, 0.12);
-}
-
-ion-icon {
-  margin: 0;
-  padding: 0;
 }
 
 .btn {
