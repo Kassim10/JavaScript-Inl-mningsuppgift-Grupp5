@@ -3,47 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <title>To-do List</title>
 </head>
-<body>
-    <header>
-        <h1>To-do Lista</h1>
-        <img src="./images/to-do-list-icon.png" alt="to-do list icon">
-    </header>
-    <div class="container">
-      <div class="card">
-        <h1 id="app-title" class="title">To-do Lista</h1>
-
-        <form id="item-form">
-          <input
-            type="text"
-            id="item-input"
-            name="item"
-            placeholder="Ange vara" />
-
-          <button type="submit" class="btn">
-            <ion-icon name="add-circle-outline"></ion-icon> Lägg till
-          </button>
-        </form>
-
-        <div class="filter">
-          <input
-            type="text"
-            class="form-input-filter"
-            id="filter"
-            placeholder="Sök" />
+    <body>
+    <div class="page-wrapper">
+        <header class="app-header">
+        <div class="header-text">
+            <p class="eyebrow">Planera din dag</p>
+            <h1>My To-Do List</h1>
+            <p class="subtitle">Skriv upp dina uppgifter och håll koll på vad som behöver göras.</p>
         </div>
+        <div class="header-icon">
+            <ion-icon name="checkbox-outline"></ion-icon>
+        </div>
+        </header>
 
-        <ul id="item-list" class="items"></ul>
+        <main class="container">
+        <section class="card todo-card">
+            <div class="card-top">
+            <h2 id="app-title" class="title">Mina uppgifter</h2>
+            <p class="task-info">Lägg till, sök och hantera dina to-dos.</p>
+            </div>
 
-        <button id="clear" class="btn btn-clear">
-          <ion-icon name="trash-outline"></ion-icon>
-          Töm allt
-        </button>
-      </div>
+            <div class="quick-stats">
+            <div class="stat-box">
+                <span class="stat-label">Fokus</span>
+                <strong>Idag</strong>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Status</span>
+                <strong>Att göra</strong>
+            </div>
+            </div>
+
+            <form id="item-form" class="todo-form">
+            <label for="item-input" class="sr-only">Lägg till uppgift</label>
+            <div class="input-group">
+                <ion-icon name="create-outline" class="input-icon"></ion-icon>
+                <input
+                type="text"
+                id="item-input"
+                name="item"
+                placeholder="Skriv en ny uppgift..." />
+            </div>
+
+            <button type="submit" class="btn">
+                <ion-icon name="add-circle-outline"></ion-icon>
+                Lägg till uppgift
+            </button>
+            </form>
+
+            <div class="filter">
+            <label for="filter" class="sr-only">Sök uppgift</label>
+            <div class="input-group">
+                <ion-icon name="search-outline" class="input-icon"></ion-icon>
+                <input
+                type="text"
+                class="form-input-filter"
+                id="filter"
+                placeholder="Sök bland uppgifter..." />
+            </div>
+            </div>
+
+            <div class="list-section">
+            <div class="list-header">
+                <h3>Uppgiftslista</h3>
+                <span class="list-badge">To-Do</span>
+            </div>
+
+            <ul id="item-list" class="items"></ul>
+            </div>
+
+            <div class="actions">
+            <button id="clear" class="btn btn-clear">
+                <ion-icon name="trash-outline"></ion-icon>
+                Rensa alla uppgifter
+            </button>
+            </div>
+        </section>
+        </main>
     </div>
-</body>
+
+    <dialog>
+        <span id="close-modal" aria-label="Closes the dialog">&times;</span>
+        <div>
+        <h4 id="messageTitle">Ett fel har inträffat</h4>
+        <p id="message">Detta är en dialog</p>
+        </div>
+    </dialog>
+    </body>
 </html>
