@@ -34,7 +34,7 @@ export const showModalError = (message) => {
 };
 
 export const isValidTodo = (todo) => {
-  if (todo.length === 0) {
+  if (todo.length === 0) {  // bug 
     showModalError('Lägg in vad ska du göra!');
     return false;
   }
