@@ -45,7 +45,7 @@ I detta projekt testas funktioner i JavaScript med hjälp av Vitest.
 
 ## Installation
 
-1. Klona projektet: git clone <repo-url>
+1. Klona projektet: git clone [<repo-url>](https://github.com/Kassim10/JavaScript-Inl-mningsuppgift-Grupp5)
 2. Installera dependencies: npm install
 
 
