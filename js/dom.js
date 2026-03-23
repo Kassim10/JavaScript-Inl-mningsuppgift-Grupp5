@@ -1,4 +1,4 @@
-const createHtml = (todoName) => {
+export const createHtml = (todoName) => {
   const li = document.createElement('li');
   li.textContent = todoName;
 
@@ -14,3 +14,7 @@ const createHtml = (todoName) => {
 
   return li;
 };
+
+if (typeof window !== 'undefined') {
+  window.createHtml = createHtml;
+}
